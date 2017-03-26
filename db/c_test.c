@@ -11,6 +11,11 @@
 #include <sys/types.h>
 #include <unistd.h>
 
+#if defined(_WIN32)
+  #include <process.h>
+  #define geteuid() _getpid()
+#endif
+
 const char* phase = "";
 static char dbname[200];
 

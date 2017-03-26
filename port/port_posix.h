@@ -34,6 +34,8 @@
   // See http://code.google.com/p/android/issues/detail?id=39824
   #include <endian.h>
   #define PLATFORM_IS_LITTLE_ENDIAN  (_BYTE_ORDER == _LITTLE_ENDIAN)
+#elif defined(OS_WINDOWS)
+  #define PLATFORM_IS_LITTLE_ENDIAN (__BYTE_ORDER__ == __ORDER_LITTLE_ENDIAN__)
 #else
   #include <endian.h>
 #endif

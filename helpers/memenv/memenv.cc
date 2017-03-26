@@ -9,6 +9,7 @@
 #include "port/port.h"
 #include "util/mutexlock.h"
 #include <map>
+#include <cstdint>
 #include <string.h>
 #include <string>
 #include <vector>

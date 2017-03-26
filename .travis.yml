@@ -7,7 +7,8 @@ os:
 - osx
 sudo: false
 before_install:
-- echo $LANG
-- echo $LC_ALL
+- mkdir build
+- cd build
+- cmake -DCMAKE_VERBOSE_MAKEFILE=ON ..
 script:
-- make -j 4 check
+- make && make test
